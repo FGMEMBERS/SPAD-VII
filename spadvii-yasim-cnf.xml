@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="spadvii-base.xml">
+
+  <sim>
+
+    <description>S.P.A.D. VII  (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>spadvii-yasim</aero>
+
+  </sim>
+  
+</PropertyList>
