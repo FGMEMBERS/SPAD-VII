@@ -43,20 +43,6 @@
   </animation>
 
   <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>propblur</object-name>
-    <object-name>propdisc</object-name>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>ailesH</object-name>
@@ -111,6 +97,20 @@
       <shininess-prop>shininess</shininess-prop>
     </shininess>
 -->
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>vitres</object-name>
   </animation>
 
   <!-- Interieur -->
