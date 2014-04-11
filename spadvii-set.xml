@@ -1,12 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="spadvii-jsbsim-cnf.xml"> -->
-<PropertyList include="spadvii-yasim-cnf.xml">
+<PropertyList include="spadvii-base.xml">
 
   <sim>
+    
     <description>S.P.A.D. VII (YASim)</description>
     <author>Emmanuel BARANGER (3D/FDM)</author>
+    <flight-model>yasim</flight-model>
+    <aero>spadvii-yasim</aero>
+    
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 1 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+    
   </sim>
 
 </PropertyList>
-

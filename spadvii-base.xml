@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
-  <sim include="Nasal/views.xml">
+  <sim include="Systems/views.xml">
 
+    <description>S.P.A.D. VII (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
@@ -13,12 +14,6 @@
     <startup>
      <splash-texture>Aircraft/SPAD-VII/spadvii-splash.png</splash-texture>
     </startup>
-
-    <systems>
-      <electrical>
-        <path>Aircraft/j3cub/cub-electrical.xml</path>
-      </electrical>
-    </systems> 
 
     <sound>
       <path>Aircraft/SPAD-VII/Sounds/spadvii-sound.xml</path>
@@ -33,32 +28,42 @@
 
     <submodels> 
       <serviceable type="bool">true</serviceable>
-      <path>Aircraft/SPAD-VII/Models/Effects/submodels.xml</path>
+      <path>Aircraft/SPAD-VII/Models/Effects/guns/submodels.xml</path>
     </submodels>
 
     <multiplay>
       <chat_display>1</chat_display>
-      <generic>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                      <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                      <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                      <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
+        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
+        <float n="0" alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                         <!-- altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft"> 0 </float>                        <!-- altitude for Smoke/Trail -->
+        <float n="4" alias="/engines/engine[0]/rpm"/>
+        <float n="5" alias="/engines/engine[0]/cranking"/>
+        <float n="6" alias="/gear/gear[0]/wow/"/>
+        <float n="7" alias="/gear/gear[1]/wow/"/>
+        <float n="8" alias="/gear/gear[2]/wow/"/>
+        <float n="9" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="10" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="11" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
       </generic>
     </multiplay>
-
-    <help>
-      <title>S.P.A.D. VII</title>
-      <key>
-        <name>d</name>
-        <desc>Open/Close canopy</desc>
-      </key>
-      <key>
-        <name>e</name>
-        <desc>Guns fire</desc>
-      </key>
-    </help>
+    
+    <help include="Systems/help.xml"/>
 
     <menubar include="Dialogs/spadvii-menu.xml"/>
 
@@ -77,12 +82,14 @@
   </engines>
 
   <input>
-    <keyboard include="Nasal/spadvii-keyboard.xml"/>
+    <keyboard include="Systems/spadvii-keyboard.xml"/>
   </input>
  
   <nasal>
-    <la5>
+    <doors>
       <file>Aircraft/SPAD-VII/Nasal/doors.nas</file>
+    </doors>
+    <la5>
       <file>Aircraft/SPAD-VII/Nasal/immat.nas</file>
       <file>Aircraft/SPAD-VII/Nasal/liveries.nas</file>
     </la5>
@@ -93,4 +100,3 @@
   </nasal>
 
 </PropertyList>
-
