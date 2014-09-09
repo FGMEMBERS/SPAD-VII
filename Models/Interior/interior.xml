@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/SPAD-VII/Models/Effects/Glass/glass</inherits-from>
+    <object-name>intvitres</object-name>
+  </effect>
+  
+  <!-- Pilot -->
+  <model>
+    <path>Aircraft/SPAD-VII/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -1.348 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.117 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Planches de bord -->
+  <model>
+    <path>Aircraft/SPAD-VII/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -1.284 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.562 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+
